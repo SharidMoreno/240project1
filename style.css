@@ -1,30 +1,158 @@
-/* Root typography settings */
-html{
-/*   set the following properties: 
-  font-size - this will be the base font size for the site
-  font-family - this will be the base font-family for the site
-  line-height - base line height, generally should be in the range 1.5-1.8 
-  color- primary text color for the site
-  background-color - primary background color for the site */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Fleur+De+Leah&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Sacramento&display=swap');
 
-  
+/* ==============================
+   Root / Base Styles
+============================== */
+html {
+  font-family: "Josefin Slab", serif;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #000;
+  background-color: #F0F0F0;
 }
 
-/* General heading styles */
-h1, h2, h3, h4, h5, h6{
-  set font styles for all of your headings, for example font-weight, line-height, font-family
+body {
+  width: 70ch;          /* limits line width for readability */
+  margin: 0 auto;       /* centers the page */
+  min-height: 90vh;
 }
 
-/* Specific element text styles */
-h1{
-  /*   this is the page title */
+/* ==============================
+   Headings
+============================== */
+h1 {
+  font-family: "Sacramento", cursive;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 3rem;     /* space above main title */
+  margin-bottom: 2rem;  /* space below main title */
 }
 
-h2{
-  
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
-p{
+h3, h4, h5, h6 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
 
-  margin-bottom: 1rem; /* optional but usually good to have a space between paragraphs */
+/* ==============================
+   Paragraphs
+============================== */
+p {
+  margin: 1rem 2rem;     /* vertical and horizontal spacing */
+  line-height: 1.6;
+}
+
+/* ==============================
+   Lists
+============================== */
+main ul, main ol {
+  list-style: disc;       /* bullets */
+  padding-left: 40px;     /* space between bullet and text */
+  margin-bottom: 1rem;
+}
+main-li {
+  margin-bottom: 0.5rem;
+}
+
+/* ==============================
+   Links
+============================== */
+a {
+  color: #EE7036;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #765e5e;
+}
+
+a:visited {
+  color: rgb(122, 111, 4);
+}
+
+/* ==============================
+   Header / Navigation
+============================== */
+header {
+  padding: 0.5em 2rem;
+  border: 1px solid #a2a2a2;
+  background-color: #f4f4f4;
+  box-shadow: 0px 0px 14px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;       /* remove bullets for nav */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;              /* space between menu items */
+}
+
+nav ul li a {
+  font-weight: bold;
+  color: #333;
+}
+
+nav ul li a:hover {
+  color: #34495e;
+}
+
+/* ==============================
+   Footer
+============================== */
+footer {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
+}
+
+/* ==============================
+   Media Queries
+============================== */
+@media (min-width: 769px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1150px;
+  }
+}
+
+@media (min-width: 1025px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* ==============================
+   Global Box Sizing
+============================== */
+* {
+  box-sizing: border-box;
 }
